@@ -5,4 +5,4 @@ Vous trouverez ici tous les TP réaliser durant l'année scolaire de Janvier 202
 Les TP on été réparti sur des branches individuel pour plus de simplicité.
 
 ### Branche de cours
-- [JavaScript](https://github.com/Felix-Ecole/ESGI-2025-TP/tree/JavaScript)
+- [JavaScript](https://github.com/Felix-Ecole/ESGI-2025-TP/tree/JavaScript) (Télécharger la [branche](https://github.com/Felix-Ecole/ESGI-2025-TP/archive/refs/heads/JavaScript.zip))
