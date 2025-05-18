@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<title>To-Do List</title>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<link rel="stylesheet" href="static/css/index.css" />
+		<link rel="stylesheet" href="static/css/libs/noty.min.css">
+		<link rel="stylesheet" href="static/css/libs/semantic.min.css" />
+		<link rel="shortcut icon" href="static/img/favicon.ico" type="image/x-icon">
+	</head>
+	<body>
+		<header>
+			<div class="ui container"><h1>To-Do List</h1></div>
+		</header>
+
+		<main class="ui container">
+			<section id="modal">
+				<form id="auth-modal" class="ui tiny modal">
+					<div class="header" id="modal-header">Login/Register</div>
+					<div class="content">
+						<div class="ui form">
+							<div class="field"><input type="text" placeholder="Username" required></div>
+							<div class="field"><input type="password" placeholder="Password" required></div>
+						</div>
+					</div>
+					<div class="actions">
+						<button class="ui button primary" id="login-btn">Login</button>
+						<button class="ui button primary" id="register-btn">Register</button>
+					</div>
+				</form>
+
+				<form id="task-del-modal" class="ui tiny modal">
+					<div class="header">Suppression l'intégralité des tâches</div>
+					<div class="content">
+						<div class="ui form">
+							<div class="field"><p>Êtes-vous sûr de vouloir effacer toutes les tâches ?</p></div>
+						</div>
+					</div>
+					<div class="actions">
+						<div class="ui button ok">Annuler</div>
+						<button class="ui button negative">Confirmer</button>
+					</div>
+				</form>
+
+				<form id="task-end-modal" class="ui tiny modal">
+					<div class="header">Suppression des tâches complétées</div>
+					<div class="content">
+						<div class="ui form">
+							<div class="field"><p>Êtes-vous sûr de vouloir effacer les tâches complétés ?</p></div>
+						</div>
+					</div>
+					<div class="actions">
+						<div class="ui button ok">Annuler</div>
+						<button class="ui button negative">Confirmer</button>
+					</div>
+				</form>
+
+				<form id="task-add-modal" class="ui tiny modal">
+					<div class="header">Nouvelle Tâche</div>
+					<div class="content">
+						<div class="ui form">
+							<div class="field"><input type="text" placeholder="Nom de la tâche" required></div>
+						</div>
+					</div>
+					<div class="actions">
+						<button class="ui button ok">Créer</button>
+					</div>
+				</form>
+
+				<form id="task-edit-modal" class="ui tiny modal">
+					<div class="header">Modification de la tâche</div>
+					<div class="content">
+						<div class="ui form">
+							<input type="hidden" id="task-edit-ID" required>
+							<div class="field"><input type="text" placeholder="Nom de la tâche" required></div>
+						</div>
+					</div>
+					<div class="actions">
+						<button class="ui button ok">Modifier</button>
+					</div>
+				</form>
+
+				<form id="task-del-ID-modal" class="ui tiny modal">
+					<div class="header">Suppression d'une tâche</div>
+					<div class="content">
+						<div class="ui form">
+							<input type="hidden" id="task-del-ID" required>
+							<div class="field"><p>Êtes-vous sûr de vouloir effacer cette tâches ?</p></div>
+						</div>
+					</div>
+					<div class="actions">
+						<div class="ui button ok">Annuler</div>
+						<button class="ui button negative">Confirmer</button>
+					</div>
+				</form>
+			</section>
+
+
+			<section id="menu">
+				<div id="find-task" class="input-box ui left icon input fluid">
+					<i class="search icon"></i><input type="text" autocomplete="off" placeholder="Recherche">
+				</div>
+				<div id="action" class="ui stackable grid equal width">
+					<button class="ui button column" onclick='$("#task-del-modal").modal("show")'>Supprimer l'intégralité des tâches</button>
+					<button class="ui button column" onclick='$("#task-end-modal").modal("show")'>Supprimer les tâches complétées</button>
+					<button class="ui button column" onclick='$("#task-add-modal").modal("show")'>Créer une nouvelle tâches</button>
+				</div>
+			</section>
+
+
+			<section id="task">
+				<ul id="task-list" class="ui segments"></ul>
+			</section>
+		</main>
+
+		<footer>
+			<div style="display: none">
+				<!-- Library (for UI) -->
+				<script src="static/js/libs/jquery-3.7.1.min.js"></script>
+				<script src="static/js/libs/semantic.min.js"></script>
+				<script src="static/js/libs/noty.min.js"></script>
+
+				<!-- Code Task (no library used) -->
+				<script src="static/js/tools/API.js"></script>
+				<script src="static/js/tools/user.js"></script>
+				<script src="static/js/tools/task.js"></script>
+				<script src="static/js/index.js"></script>
+			</div>
+		</footer>
+	</body>
+</html>
