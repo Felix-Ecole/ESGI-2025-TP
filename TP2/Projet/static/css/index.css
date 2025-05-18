@@ -1,0 +1,23 @@
+* { margin: 0; padding: 0; font-family: "Lato" }
+:root {
+	--BACK:  #FBFDFF;
+	--BLUE:  #2185D0;
+	--DARK:  #1B1C1D;
+	--GRAY:  #BABAC0;
+	--GREEN: #1EBC30;
+	--RED:   #DB2828;
+	--WHITE: #FFFFFF;
+}
+
+.ui.grid + .grid { margin-top: 0 }
+
+header { color: var(--WHITE); background: var(--BLUE); padding: 20px 0px; text-align: center }
+body   { color: var(--DARK);  background: var(--BACK) }
+main   { width: 60% !important }
+
+.input-box { margin-top: 30px;  margin-bottom: 15px }
+#action { margin: 0 auto; margin-bottom: 40px }
+
+#book-list .column:last-child { text-align: right }
+#book-list .column > i { cursor: pointer !important }
+#book-list .ui.grid + .grid { margin-top: 0; }
