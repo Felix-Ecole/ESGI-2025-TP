@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<title>Convertisseur de devises</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="shortcut icon" href="static/img/favicon.png" type="image/x-icon">
+		
+		<link rel="stylesheet" href="static/css/index.css">
+	</head>
+	<body>
+		<main>
+			<section>
+				<h1>Chargement en cours...</h1>
+			</section>
+
+			<section style="display: none;">
+				<select name="source">
+					<option value="PayPal">PayPal</option>
+					<option value="XE">XE.com</option>
+				</select>
+
+				<select name="from">
+					<option value=""></option>
+				</select>
+
+				<select name="to">
+					<option value=""></option>
+				</select>
+
+				<input type="number" name="value">
+
+				<h2></h2>
+			</section>
+		</main>
+
+		<footer>
+			<script type="module" src="static/js/index.js"></script>
+		</footer>
+	</body>
+</html>
